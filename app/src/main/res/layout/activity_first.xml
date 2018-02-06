@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.nassh.calculator.FirstActivity">
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        />
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textSize="25sp"/>
+
+    <Button
+        android:id="@+id/nine"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_below="@+id/et2"
+        android:layout_marginTop="20dp"
+        android:text="9"
+        android:textSize="25sp"
+        />
+
+    <Button
+        android:id="@+id/eight"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_alignBaseline="@+id/nine"
+        android:layout_alignBottom="@+id/nine"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp"
+        android:layout_toEndOf="@+id/nine"
+        android:layout_toRightOf="@+id/nine"
+        android:text="8"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/seven"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_below="@+id/et2"
+        android:layout_marginTop="20dp"
+        android:text="7"
+        android:layout_toEndOf="@+id/eight"
+        android:layout_toRightOf="@id/eight"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:textSize="25sp"
+        />
+
+</RelativeLayout>
