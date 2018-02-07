@@ -13,8 +13,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:text="dd"
-        android:textSize="30sp"
+        android:text=""
+        android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/buttonb"/>
 
@@ -24,9 +24,9 @@
         android:layout_height="wrap_content"
         android:textColor="@color/buttonb"
         android:layout_below="@+id/et1"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:text="ee" />
+        android:text="" />
 
     <Button
         android:id="@+id/seven"

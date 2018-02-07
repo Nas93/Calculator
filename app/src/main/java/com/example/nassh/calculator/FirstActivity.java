@@ -1,13 +1,19 @@
 package com.example.nassh.calculator;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class FirstActivity extends AppCompatActivity {
     Button one,two,three,four,five,six,seven,eight,nine,zero,plus,minus,mult,div,point,equal,clear;
     TextView t1,t2,result;
+    final char ADDITION = '+' ;
+    final char SUBSTRUCTION = '-' ;
+    final char MULTIPLICATION = '*' ;
+    final char DIVISION = '/' ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +41,86 @@ public class FirstActivity extends AppCompatActivity {
         t2 = findViewById(R.id.et2);
         result = findViewById(R.id.result);
 
-        one.setOnClickListener(new );
+        one.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                t1.setText(t1.getText().toString() + "1");
+            }
+        });
+
+        two.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                t1.setText(t1.getText().toString() + "2");
+            }
+        });
+
+        three.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                t1.setText(t1.getText().toString() + "3");
+            }
+        });
+
+        four.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                t1.setText(t1.getText().toString() + "4");
+            }
+        });
+
+        five.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                t1.setText(t1.getText().toString() + "5");
+            }
+        });
+
+        six.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                t1.setText(t1.getText().toString() + "6");
+            }
+        });
+
+        seven.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                t1.setText(t1.getText().toString() + "7");
+            }
+        });
+
+        eight.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                t1.setText(t1.getText().toString() + "8");
+            }
+        });
+
+        nine.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                t1.setText(t1.getText().toString() + "9");
+            }
+        });
+
+        zero.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("SetTextI18n")
+            @Override
+            public void onClick(View view) {
+                t1.setText(t1.getText().toString() + ".");
+            }
+        });
+
+
     }
 }
