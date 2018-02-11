@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class FirstActivity extends AppCompatActivity {
+public class FirstActivity extends AppCompatActivity implements View.OnClickListener {
     Button one,two,three,four,five,six,seven,eight,nine,zero,plus,minus,mult,div,point,equal,clear;
     TextView t1,t2,result;
     final char ADDITION = '+' ;
@@ -40,6 +40,11 @@ public class FirstActivity extends AppCompatActivity {
         t1 = findViewById(R.id.et1);
         t2 = findViewById(R.id.et2);
         result = findViewById(R.id.result);
+
+        plus.setOnClickListener(this);
+        minus.setOnClickListener(this);
+        mult.setOnClickListener(this);
+        div.setOnClickListener(this);
 
         one.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
@@ -121,6 +126,11 @@ public class FirstActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    @Override
+    public void onClick(View view) {
 
     }
 }
