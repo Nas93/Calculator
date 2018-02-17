@@ -8,12 +8,26 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class FirstActivity extends AppCompatActivity implements View.OnClickListener {
-    Button one,two,three,four,five,six,seven,eight,nine,zero,plus,minus,mult,div,point,equal,clear;
-    TextView t1,t2,result;
-    final char ADDITION = '+' ;
-    final char SUBSTRUCTION = '-' ;
-    final char MULTIPLICATION = '*' ;
-    final char DIVISION = '/' ;
+    Button one;
+    Button two;
+    Button three;
+    Button four;
+    Button five;
+    Button six;
+    Button seven;
+    Button eight;
+    Button nine;
+    Button zero;
+    Button plus;
+    Button minus;
+    Button mult;
+    Button div;
+    Button equal;
+    Button clear;
+    TextView t1;
+    Double a,b;
+
+    boolean mAddition , mSubtract ,mMultiplication ,mDivision ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +48,11 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         minus = findViewById(R.id.minus);
         mult = findViewById(R.id.mult);
         div = findViewById(R.id.div);
-        point = findViewById(R.id.point);
         equal = findViewById(R.id.equal);
         clear = findViewById(R.id.clear);
         t1 = findViewById(R.id.et1);
-        t2 = findViewById(R.id.et2);
-        result = findViewById(R.id.result);
+
+
 
         plus.setOnClickListener(this);
         minus.setOnClickListener(this);
@@ -121,8 +134,94 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         zero.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("SetTextI18n")
             @Override
-            public void onClick(View view) {
-                t1.setText(t1.getText().toString() + ".");
+            public void onClick(View view) { t1.setText(t1.getText().toString() + "0"); }
+        });
+
+        plus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    if (t1 == null){
+                        t1.setText("");
+                    }else {
+                        a = Double.parseDouble(t1.getText() + "");
+                        mAddition = true;
+                        t1.setText(null);
+                    }
+            }
+        });
+
+        minus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (t1 == null){
+                    t1.setText("");
+                }else {
+                    a = Double.parseDouble(t1.getText() + "");
+                    mSubtract = true;
+                    t1.setText(null);
+                }
+            }
+        });
+
+        mult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (t1 == null){
+                    t1.setText("");
+                }else {
+                    a = Double.parseDouble(t1.getText() + "");
+                    mMultiplication = true;
+                    t1.setText(null);
+                }
+            }
+        });
+
+        div.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (t1 == null){
+                    t1.setText("");
+                }else {
+                    a = Double.parseDouble(t1.getText() + "");
+                    mDivision = true;
+                    t1.setText(null);
+                }
+            }
+        });
+
+
+        equal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                b = Double.parseDouble(t1.getText() + "");
+
+                if (mAddition == true){
+
+                    t1.setText(a + b + "");
+                    mAddition=false;
+                }
+                else if (mSubtract == true){
+
+                    t1.setText(a - b + "");
+                    mSubtract=false;
+                }
+                else if (mMultiplication == true){
+
+                    t1.setText(a * b + "");
+                    mMultiplication=false;
+                }
+                else if (mDivision == true){
+
+                    t1.setText(a / b + "");
+                    mDivision=false;
+                }
+            }
+        });
+
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                t1.setText("");
             }
         });
 

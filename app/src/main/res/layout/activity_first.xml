@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background1"
+    android:background="@drawable/bck2"
     tools:context="com.example.nassh.calculator.FirstActivity">
 
     <TextView
@@ -14,39 +14,29 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:text=""
-        android:textSize="20sp"
+        android:textSize="40sp"
         android:textStyle="bold"
-        android:textColor="@color/buttonb"/>
-
-    <TextView
-        android:id="@+id/et2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:textColor="@color/buttonb"
-        android:layout_below="@+id/et1"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:text="" />
+        android:layout_marginBottom="50dp"/>
 
     <Button
         android:id="@+id/seven"
-        android:layout_width="70sp"
+        android:layout_width="70dp"
         android:layout_height="70sp"
         android:textSize="50sp"
-        android:layout_below="@+id/et2"
+        android:layout_below="@+id/et1"
         android:layout_marginTop="20dp"
         android:text="@string/_7"
         android:textColor="@color/button"
         android:background="@color/buttonb"
         android:textStyle="bold"
-
         />
 
     <Button
         android:id="@+id/eight"
         android:layout_width="70sp"
         android:layout_height="70sp"
-        android:layout_below="@+id/et2"
+        android:layout_below="@+id/et1"
         android:layout_toEndOf="@+id/seven"
         android:layout_toRightOf="@+id/seven"
         android:layout_marginLeft="35dp"
@@ -56,7 +46,6 @@
         android:textColor="@color/button"
         android:textSize="50sp"
         android:textStyle="bold"
-
          />
 
     <Button
@@ -64,7 +53,7 @@
         android:layout_width="70sp"
         android:layout_height="70sp"
         android:textSize="50sp"
-        android:layout_below="@+id/et2"
+        android:layout_below="@+id/et1"
         android:layout_marginTop="20dp"
         android:text="@string/_9"
         android:layout_toEndOf="@+id/eight"
@@ -216,18 +205,18 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/point"
+        android:id="@+id/clear"
         android:layout_width="70sp"
         android:layout_height="70sp"
         android:textSize="50sp"
-        android:layout_below="@+id/three"
         android:layout_marginTop="20dp"
-        android:text="@string/point"
+        android:text="C"
         android:textStyle="bold"
         android:textColor="@color/button"
         android:background="@color/buttonb"
         android:layout_toEndOf="@+id/equal"
         android:layout_toRightOf="@+id/equal"
+        android:layout_below="@+id/two"
         android:layout_marginLeft="35dp"
         />
 
@@ -248,39 +237,14 @@
         android:id="@+id/zero"
         android:layout_width="70sp"
         android:layout_height="70sp"
-        android:textSize="50sp"
-        android:layout_below="@+id/three"
-        android:layout_marginTop="20dp"
+        android:layout_alignBaseline="@+id/clear"
+        android:layout_alignBottom="@+id/clear"
+        android:layout_alignLeft="@+id/three"
+        android:layout_alignStart="@+id/three"
+        android:background="@color/buttonb"
         android:text="@string/zero"
-        android:textStyle="bold"
         android:textColor="@color/button"
-        android:background="@color/buttonb"
-        android:layout_toEndOf="@+id/point"
-        android:layout_toRightOf="@+id/point"
-        android:layout_marginLeft="35dp"
-        />
-
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="30dp"
-        android:layout_alignParentRight="true"
-        android:textColor="@color/button"
-        android:background="@color/buttonb"
-        android:text="OOOOO"/>
-
-    <Button
-        android:id="@+id/clear"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_below="@+id/equal"
-        android:background="@color/buttonb"
-        android:layout_marginTop="15sp"
-        android:textColor="@color/button"
-        android:text="C"
-        android:textSize="40sp"
-        android:textStyle="bold"/>
+        android:textSize="50sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
