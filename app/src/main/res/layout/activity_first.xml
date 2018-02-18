@@ -19,7 +19,16 @@
         android:textColor="@color/buttonb"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:layout_marginBottom="128dp"/>
+        android:layout_marginBottom="106dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Powered by Nas"
+        android:textAlignment="textEnd"
+        android:gravity="end"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/buttonb"/>
 
     <LinearLayout
         android:layout_width="match_parent"
